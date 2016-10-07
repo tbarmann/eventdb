@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type_id: 1
+  date: 2016-10-07 10:52:38
+  location: 1
+
+two:
+  name: MyString
+  type_id: 1
+  date: 2016-10-07 10:52:38
+  location: 1
