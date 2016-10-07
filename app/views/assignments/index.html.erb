@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Event</th>
       <th>Type</th>
       <th>Date</th>
       <th>Location</th>
@@ -17,9 +18,10 @@
     <% @assignments.each do |assignment| %>
       <tr>
         <td><%= assignment.name %></td>
+        <td><%= assignment.event_id %></td>
         <td><%= assignment.type_id %></td>
         <td><%= assignment.date %></td>
-        <td><%= assignment.location %></td>
+        <td><%= assignment.location_id %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

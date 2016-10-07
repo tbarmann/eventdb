@@ -1,4 +1,4 @@
 class ParticipantEvent < ActiveRecord::Base
-  belongs_to :participants
-  belongs_to :events
+  belongs_to :participant
+  belongs_to :event
 end

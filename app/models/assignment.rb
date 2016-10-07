@@ -1,5 +1,5 @@
 class Assignment < ActiveRecord::Base
-  belongs_to :assignment_event
+  belongs_to :event
   belongs_to :event_type
-  has_many :locations
+  belongs_to :location
 end

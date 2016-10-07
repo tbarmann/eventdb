@@ -3,8 +3,8 @@ class CreateParticipants < ActiveRecord::Migration
     create_table :participants do |t|
       t.string :first_name
       t.string :last_name
-      t.integer :id_role
-      t.integer :id_location
+      t.integer :role_id
+      t.integer :location_id
 
       t.timestamps null: false
     end

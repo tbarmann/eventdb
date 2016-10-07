@@ -12,21 +12,25 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :event_id %><br>
+    <%= f.collection_select(:event_id, Event.all, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :type_id %><br>
-    <%= f.number_field :type_id %>
+    <%= f.collection_select(:type_id, EventType.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
     <%= f.datetime_select :date %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.number_field :location %>
-  </div>
+    <%= f.label :location_id %><br>
+    <%= f.collection_select(:location_id, Location.all, :id, :name) %></div>
   <div class="actions">
     <%= f.submit %>
   </div>
