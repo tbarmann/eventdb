@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :venues
   resources :roles
   resources :participants
   resources :locations

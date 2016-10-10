@@ -11,22 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007210433) do
+ActiveRecord::Schema.define(version: 20161010031140) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "name"
     t.integer  "type_id"
+    t.integer  "event_id"
     t.datetime "date"
     t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "event_id"
   end
 
   create_table "event_types", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "name"
   end
 
   create_table "events", force: :cascade do |t|
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 20161007210433) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "venues", force: :cascade do |t|
+    t.string   "name"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "web"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
