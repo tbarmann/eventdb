@@ -14,31 +14,33 @@ events = [
   {:name => 'Paul Pratt senior portrait'}
 ]
 
-events.each |event| do
+events.each do |event| 
   Event.create(event)
+end
 
 roles = [
   {:name => 'Bride'},
   {:name => 'Groom'},
-  {:name => 'Bar Mitzvah'}
-]
+  {:name => 'Bar Mitzvah'}]
 
-roles.each |role| do
+roles.each do |role|
   Role.create(role)
+end
 
 participants = [
-  {:first_name => 'Mike', :last_name => 'Caldwell', :role_id: 2, location_id: 1},
-  {:first_name => 'Susan', :last_name => 'Beck', :role_id: 1, location_id: 2},
-  {:first_name => 'Mary', :last_name => 'Grant', :role_id: 1, location_id: 3},
-  {:first_name => 'Bill', :last_name => 'Lincoln', :role_id: 2, location_id: 4},
-  {:first_name => 'Julie', :last_name => 'Chagrin', :role_id: 1, location_id: 5},
-  {:first_name => 'Randy', :last_name => 'Boling', :role_id: 2, location_id: 6},
-  {:first_name => 'Sarah', :last_name => 'Prender', :role_id: 1, location_id: 7},
-  {:first_name => 'Ashwin', :last_name => 'Cole', :role_id: 2, location_id: 8},
-  {:first_name => 'Paul', :last_name => 'Pratt', :role_id: 3, location_id: 9}
-]
-participants.each |person| do
+  {:first_name => 'Mike', :last_name => 'Caldwell', :role_id => 2, :location_id => 1},
+  {:first_name => 'Susan', :last_name => 'Beck', :role_id => 1, :location_id => 2},
+  {:first_name => 'Mary', :last_name => 'Grant', :role_id => 1, :location_id => 3},
+  {:first_name => 'Bill', :last_name => 'Lincoln', :role_id => 2, :location_id => 4},
+  {:first_name => 'Julie', :last_name => 'Chagrin', :role_id => 1, :location_id => 5},
+  {:first_name => 'Randy', :last_name => 'Boling', :role_id => 2, :location_id => 6},
+  {:first_name => 'Sarah', :last_name => 'Prender', :role_id => 1, :location_id => 7},
+  {:first_name => 'Ashwin', :last_name => 'Cole', :role_id => 2, :location_id => 8},
+  {:first_name => 'Paul', :last_name => 'Pratt', :role_id => 3, :location_id => 9}]
+
+participants.each do |person|
   Participant.create(person)
+end
 
 locations = [
   {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''},
@@ -50,12 +52,10 @@ locations = [
   {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''},
   {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''},
   {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''},
-  {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''},
+  {:name => '', :address => '', :address2 => '', :city => '', :state => '', :zip => '', :phone_cell => '', :phone_other => ''}]
 
-]
-
-locations.each |location| do
-  Location.create(person)
+# locations.each do |location|
+#   Location.create(person)
 
 
 
