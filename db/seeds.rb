@@ -7,24 +7,37 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 events = [
-  {:name => 'Mike and Susan\'s wedding'},
-  {:name => 'Mary and Bill\'s wedding'},
-  {:name => 'Joe Smith Bar Mitzvah'},
-  {:name => 'Peterson 50th wedding anniversary'},
-  {:name => 'Paul Pratt senior portrait'}
+  'Mike and Susan\'s wedding',
+  'Mary and Bill\'s wedding',
+  'Joe Smith Bar Mitzvah',
+  'Peterson 50th wedding anniversary',
+  'Paul Pratt senior portrait'
 ]
 
-events.each do |event| 
-  Event.create(event)
+events.each do |event|
+  Event.create(:name => event)
 end
 
 roles = [
-  {:name => 'Bride'},
-  {:name => 'Groom'},
-  {:name => 'Bar Mitzvah'}]
+  'Bride',
+  'Groom',
+  'Best Man',
+  'Maid of Honor',
+  'Bridesmaid',
+  'Groomsman',
+  'Bat Mitzvah',
+  'Bar Mitzvah',
+  'Guest of Honor',
+  'Master of Ceremonies',
+  'Parent of Guest of Honor',
+  'Father of Bride',
+  'Father of Groom',
+  'Mother of Bride',
+  'Mother of Groom'
+]
 
 roles.each do |role|
-  Role.create(role)
+  Role.create(:name => role)
 end
 
 participants = [
@@ -59,3 +72,4 @@ locations = [
 
 
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

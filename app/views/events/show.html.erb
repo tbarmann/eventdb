@@ -5,5 +5,12 @@
   <%= @event.name %>
 </p>
 
+<% if @event.assignments.present? %>
+  <h4>Assignments</h4>
+  <% @event.assignments.each do |assignment| %>
+    <p><%= assignment.name %></p>
+  <%= end %>
+<%= end %>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
